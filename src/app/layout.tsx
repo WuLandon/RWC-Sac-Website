@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Anton, Archivo_Black, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const anton = Anton({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-anton",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const archivoBlack = Archivo_Black({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-archivo-black",
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-roboto-mono",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +33,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={cn(
+        "h-full antialiased",
+        anton.variable,
+        archivoBlack.variable,
+        robotoMono.variable,
+      )}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
