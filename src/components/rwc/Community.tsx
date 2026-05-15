@@ -1,0 +1,121 @@
+import Image from "next/image";
+
+const communityImages = {
+  groupHuddle: "/images/community/group-huddle.jpg",
+  flagWaving: "/images/community/flag-waving-group.jpg",
+  groupHands: "/images/community/group-huddle-hands.jpg",
+  posterDuoTent: "/images/community/poster-duo-tent.jpg",
+  posterTrio: "/images/community/poster-3-ppl.jpg",
+  groupRun: "/images/community/group-run.jpg",
+  tentGroupPose: "/images/community/tent-group-pose.jpg",
+  rwcTent: "/images/community/tent-3-ppl.jpg",
+} as const;
+
+type CollageItem = {
+  src: string;
+  alt: string;
+  spanClass: string;
+};
+
+const collageItems: CollageItem[] = [
+  {
+    src: communityImages.flagWaving,
+    alt: "JESUS IS KING flag waving",
+    spanClass: "col-span-7 row-span-1",
+  },
+  {
+    src: communityImages.groupHuddle,
+    alt: "Group huddle before the run",
+    spanClass: "col-span-5 row-span-1",
+  },
+  {
+    src: communityImages.posterTrio,
+    alt: "Three people with posters",
+    spanClass: "col-span-4 row-span-1",
+  },
+  {
+    src: communityImages.groupRun,
+    alt: "Runners moving together as a group",
+    spanClass: "col-span-8 row-span-1",
+  },
+  {
+    src: communityImages.tentGroupPose,
+    alt: "Group pose at RWC tent",
+    spanClass: "col-span-4 row-span-1",
+  },
+  {
+    src: communityImages.groupHands,
+    alt: "Group huddle hands in",
+    spanClass: "col-span-6 row-span-1",
+  },
+  {
+    src: communityImages.rwcTent,
+    alt: "Group huddle hands in",
+    spanClass: "col-span-2 row-span-1",
+  },
+];
+
+const photoClass =
+  "w-full h-full object-cover saturate-[0.2] contrast-110 brightness-[0.82] transition-all duration-700 ease-out group-hover:scale-105";
+
+const figureClass = "relative overflow-hidden group rounded-lg";
+
+export const Community = () => {
+  return (
+    <section
+      id="community"
+      className="relative overflow-hidden px-6 md:px-12 py-24 md:py-40 bg-ink"
+    >
+      <div className="flex items-baseline justify-between mb-12 md:mb-20">
+        <span className="font-mono text-xs tracking-widest text-primary">
+          / 03 — COMMUNITY
+        </span>
+
+        <a
+          href="https://www.instagram.com/runwchristsac/"
+          target="_blank"
+          rel="noreferrer"
+          className="font-mono text-xs tracking-widest text-foreground/60 transition-colors hover:text-primary"
+        >
+          MORE ON INSTAGRAM →
+        </a>
+      </div>
+
+      <h2 className="font-display text-[14vw] md:text-[10vw] mb-6 md:mb-20">
+        REAL PEOPLE. <br />
+        <span className="text-primary">REAL MOMENTS.</span>
+      </h2>
+
+      {/* Edge fade gradients */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-ink to-transparent md:hidden" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-ink to-transparent md:hidden" />
+
+      {/* Gallery */}
+      <div className="-mx-6 no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-6 pb-4 md:mx-0 md:grid md:snap-none md:grid-cols-12 md:gap-4 md:overflow-visible md:px-0 md:pb-0 md:auto-rows-[280px]">
+        {collageItems.map((item, index) => (
+          <figure
+            key={`${item.src}-${index}`}
+            className={`
+              ${figureClass} 
+              h-[320px] 
+              w-[min(82vw,420px)]
+              shrink-0 
+              snap-center 
+              overflow-hidden 
+              md:h-auto 
+              md:w-auto 
+              ${item.spanClass}`}
+          >
+            <Image
+              src={item.src}
+              alt={item.alt}
+              fill
+              sizes="(max-width: 767px) 82vw, 33vw"
+              className={`${photoClass} h-full w-full object-cover`}
+            />
+          </figure>
+        ))}
+      </div>
+    </section>
+  );
+};
