@@ -1,14 +1,13 @@
 import Image from "next/image";
 
 const communityImages = {
-  groupHuddle: "/images/community/group-huddle.jpg",
-  flagWaving: "/images/community/flag-waving-group.jpg",
-  groupHands: "/images/community/group-huddle-hands.jpg",
-  posterDuoTent: "/images/community/poster-duo-tent.jpg",
-  posterTrio: "/images/community/poster-3-ppl.jpg",
-  groupRun: "/images/community/group-run.jpg",
-  tentGroupPose: "/images/community/tent-group-pose.jpg",
-  rwcTent: "/images/community/tent-3-ppl.jpg",
+  groupHuddle: "/images/group-huddle.jpg",
+  flagWaving: "/images/flag-waving-group.jpg",
+  groupHands: "/images/group-huddle-hands.jpg",
+  posterTrio: "/images/poster-3-ppl.jpg",
+  groupRun: "/images/group-run.jpg",
+  tentGroupPose: "/images/tent-group-pose.jpg",
+  rwcTent: "/images/tent-3-ppl.jpg",
 } as const;
 
 type CollageItem = {
@@ -58,7 +57,7 @@ const collageItems: CollageItem[] = [
 const photoClass =
   "object-cover saturate-[0.2] contrast-110 brightness-[0.82] transition-all duration-700 ease-out group-hover:scale-105";
 
-const figureClass = "relative overflow-hidden group rounded-lg";
+const figureClass = "relative overflow-hidden group rounded-sm";
 
 export const Community = () => {
   return (

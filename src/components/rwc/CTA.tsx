@@ -4,7 +4,7 @@ export const CTA = () => {
   return (
     <section className="relative min-h-[90svh] overflow-hidden">
       <Image
-        src="/images/community/capitol-tent-group.jpg"
+        src="/images/capitol-tent-group.jpg"
         alt="The RWC Sacramento community"
         fill
         sizes="100vw"

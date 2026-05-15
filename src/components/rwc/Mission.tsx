@@ -9,7 +9,7 @@ const culture = [
   "DIVINE IS IN THE DETAILS",
 ];
 
-const missionFeatureImage = "/images/community/tent-talk.jpg";
+const missionFeatureImage = "/images/tent-talk.jpg";
 
 export const Mission = () => {
   return (
@@ -45,7 +45,7 @@ export const Mission = () => {
             alt="Mission section visual"
             fill
             sizes="(max-width: 767px) 100vw, 42vw"
-            className="object-cover saturate-[0.2] contrast-110 brightness-[0.82] rounded-lg border border-border/60"
+            className="object-cover saturate-[0.2] contrast-110 brightness-[0.82] rounded-sm border border-border/60"
           />
         </div>
       </div>

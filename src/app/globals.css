@@ -14,6 +14,9 @@
   --color-primary-foreground: hsl(var(--primary-foreground));
 
   --color-primary-deep: hsl(var(--primary-deep));
+  --color-ink: hsl(var(--ink));
+  --color-paper: hsl(var(--paper));
+  --color-concrete: hsl(var(--concrete));
 
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
@@ -23,6 +26,9 @@
 
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
 
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));

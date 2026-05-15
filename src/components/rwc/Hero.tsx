@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const heroImg = "/images/community/flag-waving-group.jpg";
-const heroVideo = "/videos/hero/rwc-video.webm";
-const heroVideoFallback = "/videos/hero/rwc-video.mp4";
+const heroImg = "/images/flag-waving-group.jpg";
+const heroVideo = "/videos/rwc-video.webm";
+const heroVideoFallback = "/videos/rwc-video.mp4";
 
 export const Hero = () => {
   return (
@@ -14,42 +14,47 @@ export const Hero = () => {
       {/* BG */}
       <div className="absolute inset-0">
         {/* Desktop Video */}
-        <video
-          className="hidden md:block w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          poster={heroImg}
-        >
-          <source src={heroVideo} type="video/webm" />
-          <source src={heroVideoFallback} type="video/mp4" />
-        </video>
+        <div className="hidden md:block absolute inset-0">
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster={heroImg}
+          >
+            <source src={heroVideo} type="video/webm" />
+            <source src={heroVideoFallback} type="video/mp4" />
+          </video>
+        </div>
 
-        {/* Mobile Image Fallback */}
-        <Image
-          src={heroImg}
-          alt="JESUS IS KING flag waving"
-          fill
-          sizes="100vw"
-          className="block object-cover md:hidden"
-        />
+        {/* Mobile Image */}
+        <div className="md:hidden absolute inset-0">
+          <Image
+            src={heroImg}
+            alt="JESUS IS KING flag waving"
+            fill
+            sizes="(max-width: 768px) 100vw, 0px"
+            priority
+            className="object-cover"
+          />
+        </div>
 
         {/* Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/40 to-ink" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-transparent to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[hsl(var(--ink)/0.7)] via-[hsl(var(--ink)/0.4)] to-[hsl(var(--ink)/1)]" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[hsl(var(--ink)/0.8)] via-transparent to-transparent" />
       </div>
 
       {/* Top label */}
-      <div className="absolute top-24 md:top-28 left-6 md:left-12 right-6 md:right-12 flex items-center justify-between font-mono text-[10px] md:text-xs tracking-widest text-foreground/70 fade-up">
+      <div className="absolute top-24 md:top-28 left-6 md:left-12 right-6 md:right-12 z-20 flex items-center justify-between font-mono text-[10px] md:text-xs tracking-widest text-foreground/70 fade-up">
         <span>LOC. SACRAMENTO / CA</span>
         <span className="hidden md:block">FAITH × FITNESS × COMMUNITY</span>
         <span>NO. 916</span>
       </div>
 
       {/* Main poster headline */}
-      <div className="relative px-6 md:px-12 pb-12 md:pb-20">
+      <div className="relative z-20 px-6 md:px-12 pb-12 md:pb-20">
         <h1
           className="font-display text-foreground fade-up"
           style={{ animationDelay: "0.1s" }}
@@ -92,7 +97,7 @@ export const Hero = () => {
       <a
         href="#mission"
         aria-label="Scroll to next section"
-        className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 items-center justify-center text-foreground/70 hover:text-primary transition-colors animate-bounce-down"
+        className="hidden md:flex absolute bottom-6 left-1/2 z-20 -translate-x-1/2 items-center justify-center text-foreground/70 hover:text-primary transition-colors animate-bounce-down"
       >
         <svg
           width="28"

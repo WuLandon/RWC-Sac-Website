@@ -22,7 +22,7 @@ export const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-ink/85 backdrop-blur-md border-b border-border"
+          ? "bg-[hsl(var(--ink)/0.85)] backdrop-blur-md border-b border-[hsl(var(--border))]"
           : "bg-transparent"
       }`}
     >
