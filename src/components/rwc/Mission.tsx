@@ -44,7 +44,7 @@ export const Mission = () => {
             src={missionFeatureImage}
             alt="Mission section visual"
             fill
-            sizes="(max-width: 767px) 100vw, 42vw"
+            sizes="(max-width: 767px) calc(100vw - 48px), 42vw"
             className="object-cover saturate-[0.2] contrast-110 brightness-[0.82] rounded-sm border border-border/60"
           />
         </div>

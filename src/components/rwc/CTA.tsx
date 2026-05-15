@@ -5,7 +5,8 @@ export const CTA = () => {
     <section className="relative min-h-[90svh] overflow-hidden">
       <Image
         src="/images/capitol-tent-group.jpg"
-        alt="The RWC Sacramento community"
+        alt="RWC tent at the capitol building"
+        aria-hidden="true"
         fill
         sizes="100vw"
         className="absolute inset-0 object-cover"

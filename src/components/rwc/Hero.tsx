@@ -20,8 +20,9 @@ export const Hero = () => {
             loop
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
             poster={heroImg}
+            aria-hidden="true"
           >
             <source src={heroVideo} type="video/webm" />
             <source src={heroVideoFallback} type="video/mp4" />
@@ -33,8 +34,9 @@ export const Hero = () => {
           <Image
             src={heroImg}
             alt="JESUS IS KING flag waving"
+            aria-hidden="true"
             fill
-            sizes="(max-width: 768px) 100vw, 0px"
+            sizes="100vw"
             priority
             className="object-cover"
           />

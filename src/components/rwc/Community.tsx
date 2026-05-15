@@ -14,6 +14,7 @@ type CollageItem = {
   src: string;
   alt: string;
   spanClass: string;
+  sizes: string;
 };
 
 const collageItems: CollageItem[] = [
@@ -21,36 +22,43 @@ const collageItems: CollageItem[] = [
     src: communityImages.flagWaving,
     alt: "JESUS IS KING flag waving",
     spanClass: "col-span-7 row-span-1",
+    sizes: "(max-width: 767px) min(82vw, 420px), 58vw",
   },
   {
     src: communityImages.groupHuddle,
     alt: "Group huddle before the run",
     spanClass: "col-span-5 row-span-1",
+    sizes: "(max-width: 767px) min(82vw, 420px), 42vw",
   },
   {
     src: communityImages.posterTrio,
     alt: "Three people with posters",
     spanClass: "col-span-4 row-span-1",
+    sizes: "(max-width: 767px) min(82vw, 420px), 67vw",
   },
   {
     src: communityImages.groupRun,
     alt: "Runners moving together as a group",
     spanClass: "col-span-8 row-span-1",
+    sizes: "(max-width: 767px) min(82vw, 420px), 33vw",
   },
   {
     src: communityImages.tentGroupPose,
     alt: "Group pose at RWC tent",
     spanClass: "col-span-4 row-span-1",
+    sizes: "(max-width: 767px) min(82vw, 420px), 33vw",
   },
   {
     src: communityImages.groupHands,
     alt: "Group huddle hands in",
     spanClass: "col-span-6 row-span-1",
+    sizes: "(max-width: 767px) min(82vw, 420px), 50vw",
   },
   {
     src: communityImages.rwcTent,
-    alt: "Group huddle hands in",
+    alt: "RWC tent group candid photo",
     spanClass: "col-span-2 row-span-1",
+    sizes: "(max-width: 767px) min(82vw, 420px), 17vw",
   },
 ];
 
@@ -109,7 +117,7 @@ export const Community = () => {
               src={item.src}
               alt={item.alt}
               fill
-              sizes="(max-width: 767px) 82vw, 33vw"
+              sizes={item.sizes}
               className={photoClass}
             />
           </figure>
