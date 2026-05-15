@@ -50,7 +50,7 @@ export const Navbar = () => {
         </ul>
 
         <a
-          href="https://linktr.ee/runwchristsac?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+          href="https://www.instagram.com/runwchristsac/"
           target="_blank"
           rel="noreferrer"
           className="font-mono text-[10px] md:text-xs tracking-widest border border-foreground/30 px-3 md:px-4 py-2 hover:bg-primary hover:border-primary transition-colors"

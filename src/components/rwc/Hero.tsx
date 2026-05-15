@@ -9,7 +9,6 @@ export const Hero = () => {
     <section
       id="top"
       className="relative min-h-[100svh] md:min-h-screen w-full overflow-hidden flex flex-col justify-end grain"
-      // className="relative min-h-[100svh] w-full flex flex-col justify-end grain"
     >
       {/* BG */}
       <div className="absolute inset-0">

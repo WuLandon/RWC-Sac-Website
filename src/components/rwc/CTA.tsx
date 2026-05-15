@@ -39,7 +39,7 @@ export const CTA = () => {
               </span>
             </a>
             <a
-              href="https://linktr.ee/runwchristsac?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+              href="https://www.instagram.com/runwchristsac/"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-3 whitespace-nowrap border-2 border-foreground text-foreground font-heading text-base md:text-lg px-8 py-5 hover:bg-foreground hover:text-ink transition-colors"
