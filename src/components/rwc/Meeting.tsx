@@ -37,7 +37,7 @@ export const Meeting = () => {
         <h2 className="font-display text-[16vw] md:text-[12vw] mb-16">
           UP NEXT
           <br />
-          DON'T MISS.
+          DON&apos;T MISS.
         </h2>
 
         {/* <p className="mt-10 font-heading text-2xl md:text-3xl">

@@ -1,11 +1,14 @@
+import Image from "next/image";
+
 export const CTA = () => {
   return (
     <section className="relative min-h-[90svh] overflow-hidden">
-      <img
+      <Image
         src="/images/community/capitol-tent-group.jpg"
         alt="The RWC Sacramento community"
-        loading="lazy"
-        className="absolute inset-0 w-full h-full object-cover"
+        fill
+        sizes="100vw"
+        className="absolute inset-0 object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/70 to-ink" />
 

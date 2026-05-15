@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const culture = [
   "MAKE HEAVEN FULL",
   "ISOLATED TO INTEGRATED",
@@ -37,12 +39,13 @@ export const Mission = () => {
           </p>
         </div>
 
-        <div className="md:col-span-5 md:h-full md:relative">
-          <img
+        <div className="relative aspect-[4/3] md:col-span-5 md:h-full md:aspect-auto">
+          <Image
             src={missionFeatureImage}
             alt="Mission section visual"
-            loading="lazy"
-            className="w-full h-full md:absolute md:inset-0 object-cover saturate-[0.2] contrast-110 brightness-[0.82] rounded-lg border border-border/60"
+            fill
+            sizes="(max-width: 767px) 100vw, 42vw"
+            className="object-cover saturate-[0.2] contrast-110 brightness-[0.82] rounded-lg border border-border/60"
           />
         </div>
       </div>

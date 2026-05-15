@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const heroImg = "/images/community/flag-waving-group.jpg";
 const heroVideo = "/videos/hero/rwc-video.webm";
 const heroVideoFallback = "/videos/hero/rwc-video.mp4";
@@ -26,10 +28,12 @@ export const Hero = () => {
         </video>
 
         {/* Mobile Image Fallback */}
-        <img
+        <Image
           src={heroImg}
           alt="JESUS IS KING flag waving"
-          className="block md:hidden w-full h-full object-cover"
+          fill
+          sizes="100vw"
+          className="block object-cover md:hidden"
         />
 
         {/* Overlays */}

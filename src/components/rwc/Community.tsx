@@ -56,7 +56,7 @@ const collageItems: CollageItem[] = [
 ];
 
 const photoClass =
-  "w-full h-full object-cover saturate-[0.2] contrast-110 brightness-[0.82] transition-all duration-700 ease-out group-hover:scale-105";
+  "object-cover saturate-[0.2] contrast-110 brightness-[0.82] transition-all duration-700 ease-out group-hover:scale-105";
 
 const figureClass = "relative overflow-hidden group rounded-lg";
 
@@ -111,7 +111,7 @@ export const Community = () => {
               alt={item.alt}
               fill
               sizes="(max-width: 767px) 82vw, 33vw"
-              className={`${photoClass} h-full w-full object-cover`}
+              className={photoClass}
             />
           </figure>
         ))}
