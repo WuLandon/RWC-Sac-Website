@@ -34,7 +34,7 @@ export const Meeting = () => {
           </span>
         </div>
 
-        <h2 className="font-display text-[16vw] md:text-[12vw] mb-16">
+        <h2 className="font-display text-[17vw] md:text-[12vw] mb-16">
           UP NEXT
           <br />
           DON&apos;T MISS.

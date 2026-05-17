@@ -34,19 +34,19 @@ const collageItems: CollageItem[] = [
     src: communityImages.posterTrio,
     alt: "Three people with posters",
     spanClass: "col-span-4 row-span-1",
-    sizes: "(max-width: 767px) min(82vw, 420px), 67vw",
+    sizes: "(max-width: 767px) min(82vw, 420px), 34vw",
   },
   {
     src: communityImages.groupRun,
     alt: "Runners moving together as a group",
     spanClass: "col-span-8 row-span-1",
-    sizes: "(max-width: 767px) min(82vw, 420px), 34vw",
+    sizes: "(max-width: 767px) min(82vw, 420px), 67vw",
   },
   {
     src: communityImages.tentGroupPose,
     alt: "Group pose at RWC tent",
     spanClass: "col-span-4 row-span-1",
-    sizes: "(max-width: 767px) min(82vw, 420px), 33vw",
+    sizes: "(max-width: 767px) min(82vw, 420px), 34vw",
   },
   {
     src: communityImages.groupHands,
