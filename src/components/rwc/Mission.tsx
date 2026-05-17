@@ -39,13 +39,13 @@ export const Mission = () => {
           </p>
         </div>
 
-        <div className="relative aspect-[4/3] md:col-span-5 md:h-full md:aspect-auto">
+        <div className="relative group overflow-hidden rounded-sm aspect-[4/3] md:col-span-5 md:h-full md:aspect-auto">
           <Image
             src={missionFeatureImage}
-            alt="Mission section visual"
+            alt="ISOLATED TO INTEGRATED RWC tent"
             fill
             sizes="(max-width: 767px) calc(100vw - 48px), 42vw"
-            className="object-cover saturate-[0.2] contrast-110 brightness-[0.82] rounded-sm border border-border/60"
+            className="object-cover saturate-[0.2] contrast-100 brightness-[0.82] transition-all duration-700 ease-out group-hover:scale-105"
           />
         </div>
       </div>

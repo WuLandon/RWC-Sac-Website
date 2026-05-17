@@ -22,7 +22,7 @@ const collageItems: CollageItem[] = [
     src: communityImages.flagWaving,
     alt: "JESUS IS KING flag waving",
     spanClass: "col-span-7 row-span-1",
-    sizes: "(max-width: 767px) min(82vw, 420px), 58vw",
+    sizes: "(max-width: 767px) min(82vw, 420px), 59vw",
   },
   {
     src: communityImages.groupHuddle,
@@ -40,7 +40,7 @@ const collageItems: CollageItem[] = [
     src: communityImages.groupRun,
     alt: "Runners moving together as a group",
     spanClass: "col-span-8 row-span-1",
-    sizes: "(max-width: 767px) min(82vw, 420px), 33vw",
+    sizes: "(max-width: 767px) min(82vw, 420px), 34vw",
   },
   {
     src: communityImages.tentGroupPose,
@@ -63,7 +63,7 @@ const collageItems: CollageItem[] = [
 ];
 
 const photoClass =
-  "object-cover saturate-[0.2] contrast-110 brightness-[0.82] transition-all duration-700 ease-out group-hover:scale-105";
+  "object-cover saturate-[0.2] contrast-100 brightness-[0.82] transition-all duration-700 ease-out group-hover:scale-105";
 
 const figureClass = "relative overflow-hidden group rounded-sm";
 
