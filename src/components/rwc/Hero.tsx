@@ -2,7 +2,6 @@ import Image from "next/image";
 
 const heroImg = "/images/webp-format/flag-waving-group.webp";
 const heroVideo = "/videos/rwc-video.webm";
-const heroVideoFallback = "/videos/rwc-video.mp4";
 
 export const Hero = () => {
   return (
@@ -25,7 +24,6 @@ export const Hero = () => {
             aria-hidden="true"
           >
             <source src={heroVideo} type="video/webm" />
-            <source src={heroVideoFallback} type="video/mp4" />
           </video>
         </div>
 
