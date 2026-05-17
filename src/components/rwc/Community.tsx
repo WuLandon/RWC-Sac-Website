@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 const communityImages = {
-  groupHuddle: "/images/group-huddle.jpg",
-  flagWaving: "/images/flag-waving-group.jpg",
-  groupHands: "/images/group-huddle-hands.jpg",
-  posterTrio: "/images/poster-3-ppl.jpg",
-  groupRun: "/images/group-run.jpg",
-  tentGroupPose: "/images/tent-group-pose.jpg",
-  rwcTent: "/images/tent-3-ppl.jpg",
+  groupHuddle: "/images/webp-format/group-huddle.webp",
+  flagWaving: "/images/webp-format/flag-waving-group.webp",
+  groupHands: "/images/webp-format/group-huddle-hands.webp",
+  posterTrio: "/images/webp-format/poster-3-ppl.webp",
+  groupRun: "/images/webp-format/group-run.webp",
+  tentGroupPose: "/images/webp-format/tent-group-pose.webp",
+  rwcTent: "/images/webp-format/tent-3-ppl.webp",
 } as const;
 
 type CollageItem = {

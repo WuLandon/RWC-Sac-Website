@@ -4,7 +4,7 @@ export const CTA = () => {
   return (
     <section className="relative min-h-[90svh] overflow-hidden">
       <Image
-        src="/images/capitol-tent-group.jpg"
+        src="/images/webp-format/capitol-tent-group.webp"
         alt="RWC tent at the capitol building"
         aria-hidden="true"
         fill

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const heroImg = "/images/flag-waving-group.jpg";
+const heroImg = "/images/webp-format/flag-waving-group.webp";
 const heroVideo = "/videos/rwc-video.webm";
 const heroVideoFallback = "/videos/rwc-video.mp4";
 

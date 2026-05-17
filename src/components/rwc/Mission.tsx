@@ -10,7 +10,7 @@ const culture = [
   "DIVINE IS IN THE DETAILS",
 ];
 
-const missionFeatureImage = "/images/tent-talk.jpg";
+const missionFeatureImage = "/images/webp-format/tent-talk.webp";
 
 export const Mission = () => {
   return (
