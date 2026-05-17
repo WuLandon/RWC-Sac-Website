@@ -4,7 +4,8 @@ const culture = [
   "MAKE HEAVEN FULL",
   "ISOLATED TO INTEGRATED",
   "KNOWN, SEEN, LOVED",
-  "CONFESSION & VULNERABILITY",
+  "CONFESSION",
+  "VULNERABILITY",
   "UNITE FOR CHRIST",
   "DIVINE IS IN THE DETAILS",
 ];
@@ -57,7 +58,7 @@ export const Mission = () => {
             CULTURE
           </span>
           <span className="font-mono text-xs tracking-widest text-foreground/50">
-            06 PILLARS
+            07 PILLARS
           </span>
         </div>
         <ul className="divide-y divide-border">

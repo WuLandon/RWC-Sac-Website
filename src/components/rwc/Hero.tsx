@@ -36,7 +36,7 @@ export const Hero = () => {
             alt="JESUS IS KING flag waving"
             aria-hidden="true"
             fill
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw"
             priority
             className="object-cover"
           />
