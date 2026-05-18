@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Anton, Archivo_Black, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -20,8 +21,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  // Uncomment and replace before production deployment:
-  // metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://rwcsacramento.vercel.app/"),
 
   title: {
     default: "Run With Christ Sacramento",
@@ -63,7 +63,10 @@ export default function RootLayout({
       lang="en"
       className={`h-full antialiased ${anton.variable} ${archivoBlack.variable} ${robotoMono.variable}`}
     >
-      <body className="min-h-screen flex flex-col">{children}</body>
+      <body className="min-h-screen flex flex-col">
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
