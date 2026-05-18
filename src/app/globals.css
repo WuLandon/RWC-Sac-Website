@@ -1,47 +1,48 @@
 @import "tailwindcss";
 
+/* Theme tokens consumed by Tailwind utilities */
 @theme inline {
+  /* Surface + text */
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
-
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
 
+  /* Brand + semantic */
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-
   --color-primary-deep: hsl(var(--primary-deep));
-  --color-ink: hsl(var(--ink));
-  --color-paper: hsl(var(--paper));
-  --color-concrete: hsl(var(--concrete));
-
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
-
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
-
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
-
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
 
+  /* Borders + states */
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 
+  /* Extra neutrals */
+  --color-ink: hsl(var(--ink));
+  --color-paper: hsl(var(--paper));
+  --color-concrete: hsl(var(--concrete));
+
+  /* Radius scale */
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 }
 
 @layer base {
+  /* Raw HSL variables */
   :root {
-    /* Base — black/white movement palette */
+    /* Base: black/white movement palette */
     --background: 0 0% 4%;
     --foreground: 0 0% 100%;
 
@@ -51,11 +52,11 @@
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 100%;
 
-    /* RWC RED — #FF3232 */
+    /* RWC red: #FF3232 */
     --primary: 0 100% 60%;
     --primary-foreground: 0 0% 100%;
 
-    /* Dark red — #CE2322 */
+    /* Dark red: #CE2322 */
     --primary-deep: 1 71% 47%;
 
     --secondary: 0 0% 10%;
@@ -76,14 +77,13 @@
 
     --radius: 0.125rem;
 
-    /* Neutrals */
+    /* Neutral palette */
     --ink: 0 0% 4%;
     --paper: 0 0% 100%;
     --concrete: 0 0% 33%;
   }
-}
 
-@layer base {
+  /* Element-level base styles */
   * {
     border-color: hsl(var(--border));
   }
@@ -127,6 +127,7 @@
     -webkit-text-stroke: 2px hsl(var(--foreground));
     color: transparent;
   }
+
   .text-stroke-red {
     -webkit-text-stroke: 2px hsl(var(--primary));
     color: transparent;
@@ -139,6 +140,7 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
