@@ -40,7 +40,7 @@ export const Mission = () => {
           </p>
         </div>
 
-        <div className="relative group overflow-hidden rounded-sm aspect-[4/3] md:col-span-5 md:h-full md:aspect-auto">
+        <div className="relative group overflow-hidden rounded-md aspect-[4/3] md:col-span-5 md:h-full md:aspect-auto">
           <Image
             src={missionFeatureImage}
             alt="ISOLATED TO INTEGRATED RWC tent"
