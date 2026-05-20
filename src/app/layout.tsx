@@ -22,7 +22,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rwcsacramento.vercel.app/"),
+  metadataBase: new URL("https://www.rwcsacramento.com/"),
 
   title: {
     default: "Run With Christ Sacramento",
