@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const heroImg = "/images/webp-format/flag-waving-group.webp";
 const heroVideo = "/videos/rwc-video.webm";
 
@@ -11,8 +9,8 @@ export const Hero = () => {
     >
       {/* BG */}
       <div className="absolute inset-0">
-        {/* Desktop Video */}
-        <div className="hidden md:block absolute inset-0">
+        {/* Background Video */}
+        <div className="absolute inset-0">
           <video
             className="h-full w-full object-cover"
             autoPlay
@@ -25,19 +23,6 @@ export const Hero = () => {
           >
             <source src={heroVideo} type="video/webm" />
           </video>
-        </div>
-
-        {/* Mobile Image */}
-        <div className="md:hidden absolute inset-0">
-          <Image
-            src={heroImg}
-            alt="JESUS IS KING flag waving"
-            aria-hidden="true"
-            fill
-            sizes="(max-width: 768px) 100vw"
-            priority
-            className="object-cover"
-          />
         </div>
 
         {/* Overlays */}
