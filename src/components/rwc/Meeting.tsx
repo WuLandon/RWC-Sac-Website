@@ -30,7 +30,7 @@ export const Meeting = () => {
             / 04 — WHEN & WHERE
           </span>
           <span className="font-mono text-xs tracking-widest hidden md:block">
-            EVERY WEEK
+            SEE YOU THERE
           </span>
         </div>
 
