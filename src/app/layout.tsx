@@ -28,11 +28,21 @@ export const metadata: Metadata = {
     default: "Run With Christ Sacramento",
     template: "%s | Run With Christ Sacramento",
   },
+
   description:
     "We are not just a run club, but a movement to make heaven full.",
+
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
+
+  manifest: "/manifest.webmanifest",
+
   openGraph: {
     title: "Run With Christ Sacramento",
     description:
@@ -47,6 +57,7 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+
   twitter: {
     card: "summary",
     title: "Run With Christ Sacramento",
