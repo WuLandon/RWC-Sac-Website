@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Run With Christ Sacramento
 
-## Getting Started
+An engaging website for the Sacramento branch of Run With Christ — designed to communicate the movement’s mission through strong visual storytelling, responsive design, and clear community information.
 
-First, run the development server:
+Live Site: [rwcsacramento.com](https://www.rwcsacramento.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run With Christ Sacramento is a local branch of the broader Run With Christ movement. This website was built to serve as a centralized digital experience where visitors can:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Learn the mission of RWC Sacramento
+- Understand what to expect at a run
+- Access current meeting information
+- Experience the energy and culture of the community
+- Find ways to get involved with the movement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design Philosophy
 
-## Learn More
+The website was designed around a few core principles:
 
-To learn more about Next.js, take a look at the following resources:
+### Experience First
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site is intended to feel energetic and community-driven — reflecting the atmosphere of an actual RWC Sacramento run.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visual hierarchy, motion, typography, photography, and pacing were all prioritized to create an emotionally engaging experience rather than a purely informational website.
 
-## Deploy on Vercel
+### Mobile-First
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Most users discover RWC Sacramento through social media on mobile devices. The interface was designed mobile-first, then expanded responsively for larger screens.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Particular emphasis was placed on:
+
+- Responsive layouts across device sizes
+- Performance-conscious mobile media delivery
+- Clear visual hierarchy and readable typography
+- Smooth, immersive scrolling and interaction patterns
+
+### Simplicity Over Overengineering
+
+The architecture intentionally avoids unnecessary complexity. The goal was to create a polished and maintainable platform that non-technical organizers can update without developer involvement.
+
+### Brand Consistency
+
+The visual system aligns closely with the identity and tone of the broader Run With Christ movement while still establishing a distinct Sacramento presence.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org?utm_source=chatgpt.com)
+- [React](https://react.dev?utm_source=chatgpt.com)
+- [TypeScript](https://www.typescriptlang.org?utm_source=chatgpt.com)
+- [Tailwind CSS](https://tailwindcss.com?utm_source=chatgpt.com)
+- [Sanity CMS](https://www.sanity.io?utm_source=chatgpt.com)
+- [Vercel](https://vercel.com?utm_source=chatgpt.com)
+
+## Architecture
+
+The website follows a lightweight frontend + CMS architecture:
+
+- **Frontend:** Next.js application focused on performance and responsive UI
+- **CMS:** Sanity used for manageable dynamic content such as meeting information and announcements
+- **Deployment:** Hosted on Vercel with optimized static asset delivery and edge distribution
+
+## Performance & SEO
+
+Performance and discoverability were considered throughout development.
+
+Key areas of focus included:
+
+- Mobile-first performance optimization
+- Responsive media and asset delivery
+- SEO infrastructure and search indexing support
+- Smooth rendering and reduced layout shift
+- Maintaining strong Google Lighthouse performance without compromising visual quality
