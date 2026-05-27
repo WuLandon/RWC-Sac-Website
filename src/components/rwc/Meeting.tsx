@@ -1,19 +1,39 @@
-// CMS-ready: replace these constants with Sanity fetch later
-const meeting = {
-  // eventType: "SPECIAL COLLAB w/ CALIFORNIA WILL BE SAVED",
-  day: "SATURDAY, MAY 23",
-  time: "10:00 AM",
-  location: "California State Capitol",
-  address: "1315 10th St, Sacramento, CA 95814",
-  notes: [
-    "Meet us at the RWC tent",
-    "Free drinks and snacks provided",
-    "Don’t hesitate to show up solo",
-    "5K run · walk · jog",
-  ],
+import { sanityFetch } from "@/sanity/lib/live";
+import { upcomingEventQuery } from "@/sanity/lib/queries";
+
+export const revalidate = 60;
+
+type MeetingData = {
+  eventType?: string;
+  date?: string;
+  time?: string;
+  location?: string;
+  address?: string;
+  notes: string[];
 };
 
-export const Meeting = () => {
+export const Meeting = async () => {
+  const { data } = await sanityFetch({
+    query: upcomingEventQuery,
+  });
+
+  const meeting = data as MeetingData;
+
+  // const eventType = meeting.eventType || "Something Exciting";
+  const time = meeting.time || "TBD";
+  const location = meeting.location || "TBD";
+  const address = meeting.address || "TBD";
+
+  const formattedDate = meeting.date
+    ? new Date(meeting.date)
+        .toLocaleDateString("en-US", {
+          weekday: "long",
+          month: "long",
+          day: "numeric",
+        })
+        .toUpperCase()
+    : "TBD";
+
   return (
     <section
       id="meeting"
@@ -40,33 +60,36 @@ export const Meeting = () => {
           DON&apos;T MISS.
         </h2>
 
-        {/* <p className="mt-10 font-heading text-2xl md:text-3xl">
-          {meeting.eventType}
-        </p> */}
+        {/* Optional event type */}
+        {/* {eventType && (
+          <p className="mt-10 font-heading text-2xl md:text-3xl">
+            {eventType}
+          </p>
+        )} */}
 
         <div className="grid md:grid-cols-12 gap-8 md:gap-12 border-t-2 border-primary-foreground pt-12">
           <div className="md:col-span-3">
             <span className="font-mono text-[10px] tracking-widest opacity-70 block mb-2">
               / DAY
             </span>
-            <p className="font-heading text-3xl md:text-4xl">{meeting.day}</p>
+            <p className="font-heading text-3xl md:text-4xl">{formattedDate}</p>
           </div>
+
           <div className="md:col-span-3">
             <span className="font-mono text-[10px] tracking-widest opacity-70 block mb-2">
               / TIME
             </span>
-            <p className="font-heading text-3xl md:text-4xl">{meeting.time}</p>
+            <p className="font-heading text-3xl md:text-4xl">{time}</p>
           </div>
+
           <div className="md:col-span-6">
             <span className="font-mono text-[10px] tracking-widest opacity-70 block mb-2">
               / LOCATION
             </span>
-            <p className="font-heading text-3xl md:text-4xl">
-              {meeting.location}
-            </p>
-            <p className="font-mono text-sm mt-2 opacity-90">
-              {meeting.address}
-            </p>
+
+            <p className="font-heading text-3xl md:text-4xl">{location}</p>
+
+            <p className="font-mono text-sm mt-2 opacity-90">{address}</p>
           </div>
         </div>
 
@@ -75,20 +98,23 @@ export const Meeting = () => {
             <span className="font-mono text-[10px] tracking-widest opacity-70 block mb-4">
               / KNOW BEFORE YOU GO
             </span>
+
             <ul className="space-y-3">
-              {meeting.notes.map((n) => (
+              {meeting.notes.map((n: string) => (
                 <li
                   key={n}
                   className="font-mono text-sm md:text-base flex gap-3 items-baseline"
                 >
-                  <span>✝</span> {n}
+                  <span>✝</span>
+                  {n}
                 </li>
               ))}
             </ul>
           </div>
+
           <div className="flex md:justify-end items-end">
             <a
-              href={`https://maps.google.com/?q=${encodeURIComponent(meeting.address)}`}
+              href={`https://maps.google.com/?q=${encodeURIComponent(address)}`}
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-3 bg-ink text-foreground font-heading text-lg md:text-xl px-8 py-5 hover:bg-paper hover:text-ink transition-colors"

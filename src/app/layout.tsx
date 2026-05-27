@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Anton, Archivo_Black, Roboto_Mono } from "next/font/google";
+import { SanityLive } from "@/sanity/lib/live";
 import "./globals.css";
 
 const anton = Anton({
@@ -77,6 +78,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col">
         {children}
+        <SanityLive />
         <Analytics />
         <SpeedInsights />
       </body>
