@@ -45,12 +45,12 @@ The visual system aligns closely with the identity and tone of the broader Run W
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org?utm_source=chatgpt.com)
-- [React](https://react.dev?utm_source=chatgpt.com)
-- [TypeScript](https://www.typescriptlang.org?utm_source=chatgpt.com)
-- [Tailwind CSS](https://tailwindcss.com?utm_source=chatgpt.com)
-- [Sanity CMS](https://www.sanity.io?utm_source=chatgpt.com)
-- [Vercel](https://vercel.com?utm_source=chatgpt.com)
+- [Next.js](https://nextjs.org)
+- [React](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Sanity CMS](https://www.sanity.io)
+- [Vercel](https://vercel.com)
 
 ## Architecture
 
