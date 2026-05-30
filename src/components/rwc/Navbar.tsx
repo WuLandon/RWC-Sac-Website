@@ -72,15 +72,9 @@ export const Navbar = () => {
               : "rounded-none shadow-none"
           }`}
         >
-          {/* Frosted glass layer — fades independently so blur doesn't flicker */}
+          {/* Frosted glass layer*/}
           <div
-            className={`absolute inset-0 bg-[hsl(var(--ink)/0.85)] backdrop-blur-xl transition-opacity duration-500 ${
-              mobileOpen || scrolled ? "opacity-100" : "opacity-0"
-            }`}
-          />
-          {/* Border layer — fades in, never "pops" */}
-          <div
-            className={`border-foreground/10 pointer-events-none absolute inset-0 rounded-[inherit] border transition-opacity duration-500 ${
+            className={`absolute inset-0 bg-[hsl(var(--secondary)/0.85)] backdrop-blur-xl transition-opacity duration-500 ${
               mobileOpen || scrolled ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -136,7 +130,7 @@ export const Navbar = () => {
                       <a
                         href={link.href}
                         onClick={() => setMobileOpen(false)}
-                        className="font-heading text-foreground hover:text-primary flex items-center justify-between py-3 text-3xl transition-colors"
+                        className="group font-heading text-foreground flex items-center justify-between rounded-2xl border border-transparent px-1 py-3.5 text-[2rem] tracking-[-0.04em] uppercase transition-all duration-300"
                       >
                         {link.label}
                         <span className="text-primary font-mono text-sm">
