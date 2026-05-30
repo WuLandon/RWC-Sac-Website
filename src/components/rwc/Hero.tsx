@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <section
       id="top"
-      className="relative min-h-[100svh] w-full overflow-hidden flex flex-col justify-end grain"
+      className="grain relative flex min-h-[100svh] w-full flex-col justify-end overflow-hidden"
     >
       {/* BG */}
       <div className="absolute inset-0">
@@ -31,14 +31,14 @@ export const Hero = () => {
       </div>
 
       {/* Top label */}
-      <div className="absolute top-24 md:top-28 left-6 md:left-12 right-6 md:right-12 z-20 flex items-center justify-between font-mono text-[10px] md:text-xs tracking-widest text-foreground/70 fade-up">
+      <div className="text-foreground/70 fade-up absolute top-24 right-6 left-6 z-20 flex items-center justify-between font-mono text-[10px] tracking-widest md:top-28 md:right-12 md:left-12 md:text-xs">
         <span>LOC. SACRAMENTO / CA</span>
         <span className="hidden md:block">FAITH × FITNESS × COMMUNITY</span>
         <span>NO. 916</span>
       </div>
 
       {/* Main poster headline */}
-      <div className="relative z-20 px-6 md:px-12 pb-12 md:pb-20">
+      <div className="relative z-20 px-6 pb-12 md:px-12 md:pb-20">
         <h1
           className="font-display text-foreground fade-up"
           style={{ animationDelay: "0.1s" }}
@@ -51,9 +51,9 @@ export const Hero = () => {
           </span>
         </h1>
 
-        <div className="mt-8 md:mt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+        <div className="mt-8 flex flex-col gap-8 md:mt-12 md:flex-row md:items-end md:justify-between">
           <p
-            className="font-mono text-sm md:text-base text-foreground/80 max-w-md leading-relaxed fade-up"
+            className="text-foreground/80 fade-up max-w-md font-mono text-sm leading-relaxed md:text-base"
             style={{ animationDelay: "0.3s" }}
           >
             Not just a run club —
@@ -66,7 +66,7 @@ export const Hero = () => {
           <div className="fade-up" style={{ animationDelay: "0.45s" }}>
             <a
               href="#meeting"
-              className="group inline-flex items-center gap-3 bg-primary text-primary-foreground font-heading text-base md:text-lg px-8 py-5 hover:bg-primary-deep transition-colors"
+              className="group bg-primary text-primary-foreground font-heading hover:bg-primary-deep inline-flex items-center gap-3 px-8 py-5 text-base transition-colors md:text-lg"
             >
               JOIN THE MOVEMENT
               <span className="transition-transform group-hover:translate-x-1">
@@ -81,7 +81,7 @@ export const Hero = () => {
       <a
         href="#mission"
         aria-label="Scroll to next section"
-        className="hidden md:flex absolute bottom-6 left-1/2 z-20 -translate-x-1/2 items-center justify-center text-foreground/70 hover:text-primary transition-colors animate-bounce-down"
+        className="text-foreground/70 hover:text-primary animate-bounce-down absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 items-center justify-center transition-colors md:flex"
       >
         <svg
           width="28"

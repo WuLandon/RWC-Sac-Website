@@ -76,7 +76,7 @@ export default function RootLayout({
       lang="en"
       className={`h-full antialiased ${anton.variable} ${archivoBlack.variable} ${robotoMono.variable}`}
     >
-      <body className="min-h-screen flex flex-col">
+      <body className="flex min-h-screen flex-col">
         {children}
         <SanityLive />
         <Analytics />

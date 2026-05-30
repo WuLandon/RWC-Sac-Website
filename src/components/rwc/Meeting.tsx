@@ -37,24 +37,24 @@ export const Meeting = async () => {
   return (
     <section
       id="meeting"
-      className="relative px-6 md:px-12 py-24 md:py-40 bg-primary text-primary-foreground overflow-hidden"
+      className="bg-primary text-primary-foreground relative overflow-hidden px-6 py-24 md:px-12 md:py-40"
     >
       {/* Watermark */}
-      <div className="absolute -top-10 -right-10 font-display text-[40vw] md:text-[20vw] text-primary-deep/30 select-none pointer-events-none leading-none">
+      <div className="font-display text-primary-deep/30 pointer-events-none absolute -top-10 -right-10 text-[40vw] leading-none select-none md:text-[20vw]">
         RWC
       </div>
 
       <div className="relative">
-        <div className="flex items-baseline justify-between mb-12 md:mb-20">
+        <div className="mb-12 flex items-baseline justify-between md:mb-20">
           <span className="font-mono text-xs tracking-widest">
             / 04 — WHEN & WHERE
           </span>
-          <span className="font-mono text-xs tracking-widest hidden md:block">
+          <span className="hidden font-mono text-xs tracking-widest md:block">
             SEE YOU THERE
           </span>
         </div>
 
-        <h2 className="font-display text-[17vw] md:text-[12vw] mb-16">
+        <h2 className="font-display mb-16 text-[17vw] md:text-[12vw]">
           UP NEXT
           <br />
           DON&apos;T MISS.
@@ -67,35 +67,35 @@ export const Meeting = async () => {
           </p>
         )} */}
 
-        <div className="grid md:grid-cols-12 gap-8 md:gap-12 border-t-2 border-primary-foreground pt-12">
+        <div className="border-primary-foreground grid gap-8 border-t-2 pt-12 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-3">
-            <span className="font-mono text-[10px] tracking-widest opacity-70 block mb-2">
+            <span className="mb-2 block font-mono text-[10px] tracking-widest opacity-70">
               / DAY
             </span>
             <p className="font-heading text-3xl md:text-4xl">{formattedDate}</p>
           </div>
 
           <div className="md:col-span-3">
-            <span className="font-mono text-[10px] tracking-widest opacity-70 block mb-2">
+            <span className="mb-2 block font-mono text-[10px] tracking-widest opacity-70">
               / TIME
             </span>
             <p className="font-heading text-3xl md:text-4xl">{time}</p>
           </div>
 
           <div className="md:col-span-6">
-            <span className="font-mono text-[10px] tracking-widest opacity-70 block mb-2">
+            <span className="mb-2 block font-mono text-[10px] tracking-widest opacity-70">
               / LOCATION
             </span>
 
             <p className="font-heading text-3xl md:text-4xl">{location}</p>
 
-            <p className="font-mono text-sm mt-2 opacity-90">{address}</p>
+            <p className="mt-2 font-mono text-sm opacity-90">{address}</p>
           </div>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-12 border-t-2 border-primary-foreground pt-12">
+        <div className="border-primary-foreground mt-12 grid gap-12 border-t-2 pt-12 md:grid-cols-2">
           <div>
-            <span className="font-mono text-[10px] tracking-widest opacity-70 block mb-4">
+            <span className="mb-4 block font-mono text-[10px] tracking-widest opacity-70">
               / KNOW BEFORE YOU GO
             </span>
 
@@ -103,7 +103,7 @@ export const Meeting = async () => {
               {meeting.notes.map((n: string) => (
                 <li
                   key={n}
-                  className="font-mono text-sm md:text-base flex gap-3 items-baseline"
+                  className="flex items-baseline gap-3 font-mono text-sm md:text-base"
                 >
                   <span>✝</span>
                   {n}
@@ -112,12 +112,12 @@ export const Meeting = async () => {
             </ul>
           </div>
 
-          <div className="flex md:justify-end items-end">
+          <div className="flex items-end md:justify-end">
             <a
               href={`https://maps.google.com/?q=${encodeURIComponent(address)}`}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex items-center gap-3 bg-ink text-foreground font-heading text-lg md:text-xl px-8 py-5 hover:bg-paper hover:text-ink transition-colors"
+              className="group bg-ink text-foreground font-heading hover:bg-paper hover:text-ink inline-flex items-center gap-3 px-8 py-5 text-lg transition-colors md:text-xl"
             >
               GET DIRECTIONS
               <span className="transition-transform group-hover:translate-x-1">
