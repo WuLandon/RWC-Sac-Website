@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+dist
+build
+coverage
+
+# Environment files
+.env*
+
+# Lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# OS files
+.DS_Store
