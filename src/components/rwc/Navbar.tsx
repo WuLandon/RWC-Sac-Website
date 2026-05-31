@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FaInstagram, FaTiktok } from "react-icons/fa6";
 
 const links = [
   { label: "HOME", href: "#top" },
@@ -174,7 +175,7 @@ export const Navbar = () => {
                       aria-label="Instagram"
                       className="border-foreground/15 text-foreground hover:border-primary hover:text-primary flex h-10 w-10 items-center justify-center rounded-full border transition-colors"
                     >
-                      <InstagramIcon />
+                      <FaInstagram className="h-4 w-4" />
                     </a>
 
                     <a
@@ -184,7 +185,7 @@ export const Navbar = () => {
                       aria-label="TikTok"
                       className="border-foreground/15 text-foreground hover:border-primary hover:text-primary flex h-10 w-10 items-center justify-center rounded-full border transition-colors"
                     >
-                      <TikTokIcon />
+                      <FaTiktok className="h-4 w-4" />
                     </a>
                   </div>
                 </div>
@@ -209,30 +210,4 @@ const BrandLogo = ({ onClick }: { onClick?: () => void }) => (
       SACRAMENTO
     </span>
   </a>
-);
-
-const InstagramIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-    className="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <rect x="3" y="3" width="18" height="18" rx="5" />
-    <circle cx="12" cy="12" r="4" />
-    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-  </svg>
-);
-
-const TikTokIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-    className="h-4 w-4"
-    fill="currentColor"
-  >
-    <path d="M16.6 3c.3 2.4 1.7 4 4.1 4.2v3.1c-1.4.1-2.8-.3-4-1.1v5.9c0 4-2.7 6.4-6.2 6.4-3.1 0-5.5-2.1-5.5-5.2 0-3.5 2.8-5.6 6.5-5.3v3.3c-1.8-.3-3.1.5-3.1 1.9 0 1.2.9 2 2.1 2 1.4 0 2.4-.8 2.4-2.8V3h3.7Z" />
-  </svg>
 );
