@@ -130,7 +130,7 @@ export const Navbar = () => {
                       <a
                         href={link.href}
                         onClick={() => setMobileOpen(false)}
-                        className="group font-heading text-foreground flex items-center justify-between rounded-2xl border border-transparent px-1 py-3.5 text-[2rem] tracking-[-0.04em] uppercase transition-all duration-300"
+                        className="font-nav text-foreground flex items-center justify-between px-1 py-3.5 text-[2rem] uppercase"
                       >
                         {link.label}
                         <span className="text-primary font-mono text-sm">

@@ -119,6 +119,12 @@
     line-height: 0.9;
   }
 
+  .font-nav {
+    font-family: var(--font-oswald), sans-serif;
+    letter-spacing: 0.04em;
+    line-height: 0.95;
+  }
+
   .font-mono {
     font-family: var(--font-roboto-mono), monospace;
   }
