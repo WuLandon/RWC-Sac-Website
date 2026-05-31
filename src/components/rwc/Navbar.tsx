@@ -9,6 +9,7 @@ const links = [
   { label: "EXPECT", href: "#expect" },
   { label: "COMMUNITY", href: "#community" },
   { label: "JOIN", href: "#meeting" },
+  { label: "SOCIALS", href: "#cta" },
 ];
 
 export const Navbar = () => {
@@ -30,7 +31,7 @@ export const Navbar = () => {
       <nav
         className={`fixed top-0 right-0 left-0 z-50 hidden transition-all duration-300 md:block ${
           scrolled
-            ? "border-foreground/10 border-b bg-[hsl(var(--ink)/0.85)] backdrop-blur-md"
+            ? "border-foreground/10 border-b bg-[hsl(var(--secondary)/0.85)] backdrop-blur-md"
             : "bg-transparent"
         }`}
       >
@@ -51,17 +52,17 @@ export const Navbar = () => {
           </ul>
 
           <a
-            href="https://www.instagram.com/runwchristsac/"
+            href="https://venmo.com/u/runwithchristsac"
             target="_blank"
             rel="noreferrer"
             className="border-foreground/30 hover:border-primary hover:bg-primary inline-flex border px-4 py-2 font-mono text-xs tracking-widest transition-colors"
           >
-            @runwchristsac
+            DONATE
           </a>
         </div>
       </nav>
 
-      {/* Mobile Navbar + Menu: same animated container */}
+      {/* Mobile Navbar + Menu*/}
       <nav
         className="fixed top-0 right-0 left-0 z-50 transition-[padding] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden"
         style={{ padding: mobileOpen ? "1rem" : "0" }}
@@ -75,7 +76,7 @@ export const Navbar = () => {
         >
           {/* Frosted glass layer*/}
           <div
-            className={`absolute inset-0 bg-[hsl(var(--secondary)/0.85)] backdrop-blur-xl transition-opacity duration-500 ${
+            className={`absolute inset-0 border-b bg-[hsl(var(--secondary)/0.85)] backdrop-blur-xl transition-opacity duration-500 ${
               mobileOpen || scrolled ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -116,30 +117,34 @@ export const Navbar = () => {
             <div className="overflow-hidden">
               <div className="px-7 py-7">
                 <ul className="flex flex-col gap-1">
-                  {links.map((link, index) => (
-                    <li
-                      key={link.href}
-                      className={`transition-all duration-500 ease-out ${
-                        mobileOpen
-                          ? "translate-y-0 opacity-100"
-                          : "translate-y-3 opacity-0"
-                      }`}
-                      style={{
-                        transitionDelay: mobileOpen ? `${index * 50}ms` : "0ms",
-                      }}
-                    >
-                      <a
-                        href={link.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="font-nav text-foreground flex items-center justify-between px-1 py-3.5 text-[2rem] uppercase"
+                  {links
+                    .filter((link) => link.label !== "SOCIALS")
+                    .map((link, index) => (
+                      <li
+                        key={link.href}
+                        className={`transition-all duration-500 ease-out ${
+                          mobileOpen
+                            ? "translate-y-0 opacity-100"
+                            : "translate-y-3 opacity-0"
+                        }`}
+                        style={{
+                          transitionDelay: mobileOpen
+                            ? `${index * 50}ms`
+                            : "0ms",
+                        }}
                       >
-                        {link.label}
-                        <span className="text-primary font-mono text-sm">
-                          →
-                        </span>
-                      </a>
-                    </li>
-                  ))}
+                        <a
+                          href={link.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="font-nav text-foreground flex items-center justify-between px-1 py-3.5 text-[2rem] uppercase"
+                        >
+                          {link.label}
+                          <span className="text-primary font-mono text-sm">
+                            →
+                          </span>
+                        </a>
+                      </li>
+                    ))}
                 </ul>
 
                 <a
@@ -206,7 +211,7 @@ const BrandLogo = ({ onClick }: { onClick?: () => void }) => (
     aria-label="Run With Christ Sacramento Home"
   >
     <span className="font-display text-primary text-3xl md:text-4xl">RWC</span>
-    <span className="text-foreground/70 hidden font-mono text-[10px] tracking-widest sm:block md:text-xs">
+    <span className="text-foreground/70 font-mono text-[10px] tracking-widest sm:block md:text-xs">
       SACRAMENTO
     </span>
   </a>

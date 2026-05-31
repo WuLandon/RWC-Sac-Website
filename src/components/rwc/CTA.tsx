@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const CTA = () => {
   return (
-    <section className="relative min-h-[90svh] overflow-hidden">
+    <section id="cta" className="relative min-h-[90svh] overflow-hidden">
       <Image
         src="/images/webp-format/capitol-tent-group.webp"
         alt="RWC tent at the capitol building"
