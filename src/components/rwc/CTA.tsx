@@ -32,7 +32,7 @@ export const CTA = () => {
           <div className="flex flex-col gap-4 lg:flex-row">
             <a
               href="#meeting"
-              className="group bg-primary text-primary-foreground font-heading hover:bg-primary-deep inline-flex items-center gap-3 px-8 py-5 text-base whitespace-nowrap transition-colors md:text-lg"
+              className="group bg-primary text-primary-foreground font-heading hover:bg-primary-deep inline-flex items-center gap-3 rounded-sm px-8 py-5 text-base whitespace-nowrap transition-colors md:text-lg"
             >
               JOIN THE MOVEMENT
               <span className="transition-transform group-hover:translate-x-1">
@@ -43,7 +43,7 @@ export const CTA = () => {
               href="https://www.instagram.com/runwchristsac/"
               target="_blank"
               rel="noreferrer"
-              className="group border-foreground text-foreground font-heading hover:bg-foreground hover:text-ink inline-flex items-center gap-3 border-2 px-8 py-5 text-base whitespace-nowrap transition-colors md:text-lg"
+              className="group border-foreground text-foreground font-heading hover:bg-foreground hover:text-ink inline-flex items-center gap-3 rounded-sm border-2 px-8 py-5 text-base whitespace-nowrap transition-colors md:text-lg"
             >
               FOLLOW @runwchristsac
               <span className="transition-transform group-hover:translate-x-1"></span>

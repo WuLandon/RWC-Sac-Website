@@ -117,7 +117,7 @@ export const Meeting = async () => {
               href={`https://maps.google.com/?q=${encodeURIComponent(address)}`}
               target="_blank"
               rel="noreferrer"
-              className="group bg-ink text-foreground font-heading hover:bg-paper hover:text-ink inline-flex items-center gap-3 px-8 py-5 text-lg transition-colors md:text-xl"
+              className="group bg-ink text-foreground font-heading hover:bg-paper hover:text-ink inline-flex items-center gap-3 rounded-sm px-8 py-5 text-lg transition-colors md:text-xl"
             >
               GET DIRECTIONS
               <span className="transition-transform group-hover:translate-x-1">

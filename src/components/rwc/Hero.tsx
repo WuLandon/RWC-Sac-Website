@@ -66,7 +66,7 @@ export const Hero = () => {
           <div className="fade-up" style={{ animationDelay: "0.45s" }}>
             <a
               href="#meeting"
-              className="group bg-primary text-primary-foreground font-heading hover:bg-primary-deep inline-flex items-center gap-3 px-8 py-5 text-base transition-colors md:text-lg"
+              className="group bg-primary text-primary-foreground font-heading hover:bg-primary-deep inline-flex items-center gap-3 rounded-sm px-8 py-5 text-base transition-colors md:text-lg"
             >
               JOIN THE MOVEMENT
               <span className="transition-transform group-hover:translate-x-1">

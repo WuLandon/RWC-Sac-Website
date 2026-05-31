@@ -55,7 +55,7 @@ export const Navbar = () => {
             href="https://venmo.com/u/runwithchristsac"
             target="_blank"
             rel="noreferrer"
-            className="border-foreground/30 hover:border-primary hover:bg-primary inline-flex border px-4 py-2 font-mono text-xs tracking-widest transition-colors"
+            className="border-foreground/30 hover:border-primary hover:bg-primary inline-flex rounded-sm border px-4 py-2 font-mono text-xs tracking-widest transition-colors"
           >
             DONATE
           </a>
@@ -150,7 +150,7 @@ export const Navbar = () => {
                 <a
                   href="https://venmo.com/u/runwithchristsac"
                   onClick={() => setMobileOpen(false)}
-                  className={`bg-primary font-heading text-primary-foreground hover:bg-primary-deep mt-6 flex w-full items-center justify-center rounded-xl px-6 py-4 text-xl transition-all duration-500 ${
+                  className={`bg-primary font-heading text-primary-foreground hover:bg-primary-deep mt-6 flex w-full items-center justify-center rounded-sm px-6 py-4 text-xl transition-all duration-500 ${
                     mobileOpen
                       ? "translate-y-0 opacity-100"
                       : "translate-y-3 opacity-0"
