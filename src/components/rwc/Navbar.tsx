@@ -31,7 +31,7 @@ export const Navbar = () => {
       <nav
         className={`fixed top-0 right-0 left-0 z-50 hidden transition-all duration-300 md:block ${
           scrolled
-            ? "border-foreground/10 border-b bg-[hsl(var(--secondary)/0.85)] backdrop-blur-md"
+            ? "border-foreground/10 border-b bg-[hsl(var(--secondary)/0.85)] backdrop-blur-xl"
             : "bg-transparent"
         }`}
       >
