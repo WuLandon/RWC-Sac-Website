@@ -71,10 +71,10 @@ export const Community = () => {
   return (
     <section
       id="community"
-      className="relative overflow-hidden px-6 md:px-12 py-24 md:py-40 bg-ink"
+      className="bg-ink relative overflow-hidden px-6 py-24 md:px-12 md:py-40"
     >
-      <div className="flex items-baseline justify-between mb-12 md:mb-20">
-        <span className="font-mono text-xs tracking-widest text-primary">
+      <div className="mb-12 flex items-baseline justify-between md:mb-20">
+        <span className="text-primary font-mono text-xs tracking-widest">
           / 03 — COMMUNITY
         </span>
 
@@ -82,36 +82,27 @@ export const Community = () => {
           href="https://www.instagram.com/runwchristsac/"
           target="_blank"
           rel="noreferrer"
-          className="font-mono text-xs tracking-widest text-foreground/60 transition-colors hover:text-primary"
+          className="text-foreground/60 hover:text-primary font-mono text-xs tracking-widest transition-colors"
         >
           MORE ON INSTAGRAM →
         </a>
       </div>
 
-      <h2 className="font-display text-[14vw] md:text-[10vw] mb-6 md:mb-20">
+      <h2 className="font-display mb-6 text-[14vw] md:mb-20 md:text-[10vw]">
         REAL PEOPLE. <br />
         <span className="text-primary">REAL MOMENTS.</span>
       </h2>
 
       {/* Edge fade gradients */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-ink to-transparent md:hidden" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-ink to-transparent md:hidden" />
+      <div className="from-ink pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r to-transparent md:hidden" />
+      <div className="from-ink pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l to-transparent md:hidden" />
 
       {/* Gallery */}
-      <div className="-mx-6 no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-6 pb-4 md:mx-0 md:grid md:snap-none md:grid-cols-12 md:gap-4 md:overflow-visible md:px-0 md:pb-0 md:auto-rows-[280px]">
+      <div className="no-scrollbar -mx-6 flex snap-x snap-mandatory gap-3 overflow-x-auto px-6 pb-4 md:mx-0 md:grid md:snap-none md:auto-rows-[280px] md:grid-cols-12 md:gap-4 md:overflow-visible md:px-0 md:pb-0">
         {collageItems.map((item, index) => (
           <figure
             key={`${item.src}-${index}`}
-            className={`
-              ${figureClass} 
-              h-[320px] 
-              w-[min(82vw,420px)]
-              shrink-0 
-              snap-center 
-              overflow-hidden 
-              md:h-auto 
-              md:w-auto 
-              ${item.spanClass}`}
+            className={` ${figureClass} h-[320px] w-[min(82vw,420px)] shrink-0 snap-center overflow-hidden md:h-auto md:w-auto ${item.spanClass}`}
           >
             <Image
               src={item.src}

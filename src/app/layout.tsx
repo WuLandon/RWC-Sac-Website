@@ -1,7 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Anton, Archivo_Black, Roboto_Mono } from "next/font/google";
+import { Anton, Archivo_Black, Roboto_Mono, Oswald } from "next/font/google";
 import { SanityLive } from "@/sanity/lib/live";
 import "./globals.css";
 
@@ -15,6 +15,12 @@ const archivoBlack = Archivo_Black({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-archivo-black",
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+  weight: ["400"],
 });
 
 const robotoMono = Roboto_Mono({
@@ -74,9 +80,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased ${anton.variable} ${archivoBlack.variable} ${robotoMono.variable}`}
+      className={`h-full antialiased ${anton.variable} ${archivoBlack.variable} ${oswald.variable} ${robotoMono.variable}`}
     >
-      <body className="min-h-screen flex flex-col">
+      <body className="flex min-h-screen flex-col">
         {children}
         <SanityLive />
         <Analytics />

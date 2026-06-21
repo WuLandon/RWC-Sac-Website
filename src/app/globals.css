@@ -106,6 +106,18 @@
 }
 
 @layer utilities {
+  .font-anton {
+    font-family: var(--font-anton), sans-serif;
+  }
+
+  .font-archivo {
+    font-family: var(--font-archivo-black), sans-serif;
+  }
+
+  .font-oswald {
+    font-family: var(--font-oswald), sans-serif;
+  }
+
   .font-display {
     font-family: var(--font-anton), var(--font-archivo-black), sans-serif;
     font-style: italic;
@@ -117,6 +129,12 @@
     font-family: var(--font-archivo-black), sans-serif;
     letter-spacing: -0.02em;
     line-height: 0.9;
+  }
+
+  .font-nav {
+    font-family: var(--font-oswald), sans-serif;
+    letter-spacing: 0.04em;
+    line-height: 0.95;
   }
 
   .font-mono {

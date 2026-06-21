@@ -38,46 +38,46 @@ export const Expect = () => {
   return (
     <section
       id="expect"
-      className="relative px-6 md:px-12 py-24 md:py-40 bg-paper text-ink"
+      className="bg-paper text-ink relative px-6 py-24 md:px-12 md:py-40"
     >
-      <div className="flex items-baseline justify-between mb-12 md:mb-20">
-        <span className="font-mono text-xs tracking-widest text-primary">
+      <div className="mb-12 flex items-baseline justify-between md:mb-20">
+        <span className="text-primary font-mono text-xs tracking-widest">
           / 02 — WHAT TO EXPECT
         </span>
-        <span className="font-mono text-xs tracking-widest text-ink/50 hidden md:block">
+        <span className="text-ink/50 hidden font-mono text-xs tracking-widest md:block">
           A REAL RUN
         </span>
       </div>
 
-      <h2 className="font-display text-[13vw] md:text-[10vw] mb-12 md:mb-24">
+      <h2 className="font-display mb-12 text-[13vw] md:mb-24 md:text-[10vw]">
         SHOW UP. <br />
         <span className="text-primary">RUN. PRAY. BELONG.</span>
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-px bg-ink/10">
+      <div className="bg-ink/10 grid gap-px md:grid-cols-3">
         {phases.map((p) => (
-          <article key={p.tag} className="bg-paper p-8 md:p-10 flex flex-col">
-            <div className="flex items-baseline justify-between mb-8">
-              <span className="font-mono text-xs text-primary tracking-widest">
+          <article key={p.tag} className="bg-paper flex flex-col p-8 md:p-10">
+            <div className="mb-8 flex items-baseline justify-between">
+              <span className="text-primary font-mono text-xs tracking-widest">
                 PHASE {p.tag}
               </span>
-              <span className="font-mono text-xs text-ink/40">✝</span>
+              <span className="text-ink/40 font-mono text-xs">✝</span>
             </div>
-            <h3 className="font-display text-5xl md:text-6xl mb-8">
+            <h3 className="font-display mb-8 text-5xl md:text-6xl">
               {p.title}
             </h3>
-            <ul className="space-y-3 mb-8 flex-1">
+            <ul className="mb-8 flex-1 space-y-3">
               {p.items.map((i) => (
                 <li
                   key={i}
-                  className="font-mono text-sm flex gap-3 items-baseline"
+                  className="flex items-baseline gap-3 font-mono text-sm"
                 >
                   <span className="text-primary">→</span>
                   {i}
                 </li>
               ))}
             </ul>
-            <p className="font-heading text-lg border-t border-ink/20 pt-6">
+            <p className="font-heading border-ink/20 border-t pt-6 text-lg">
               {p.note}
             </p>
           </article>
