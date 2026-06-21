@@ -16,7 +16,7 @@ export const Mission = () => {
   return (
     <section
       id="mission"
-      className="bg-ink relative px-6 py-24 md:px-12 md:py-40"
+      className="bg-ink relative px-6 pt-24 pb-8 md:px-12 md:pt-40 md:pb-24"
     >
       <div className="mb-12 md:mb-20">
         <span className="text-primary font-mono text-xs tracking-widest">
@@ -52,7 +52,7 @@ export const Mission = () => {
       </div>
 
       {/* Culture statements */}
-      <div className="border-border mt-20 border-t pt-12 md:mt-32">
+      <div className="mt-20 pt-12 md:mt-32">
         <div className="mb-8 flex items-baseline justify-between">
           <span className="text-foreground/50 font-mono text-xs tracking-widest">
             CULTURE

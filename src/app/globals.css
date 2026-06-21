@@ -106,6 +106,18 @@
 }
 
 @layer utilities {
+  .font-anton {
+    font-family: var(--font-anton), sans-serif;
+  }
+
+  .font-archivo {
+    font-family: var(--font-archivo-black), sans-serif;
+  }
+
+  .font-oswald {
+    font-family: var(--font-oswald), sans-serif;
+  }
+
   .font-display {
     font-family: var(--font-anton), var(--font-archivo-black), sans-serif;
     font-style: italic;

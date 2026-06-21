@@ -2,6 +2,7 @@ import { Navbar } from "@/components/rwc/Navbar";
 import { Hero } from "@/components/rwc/Hero";
 import { Marquee } from "@/components/rwc/Marquee";
 import { Mission } from "@/components/rwc/Mission";
+import { Donate } from "@/components/rwc/Donate";
 import { Expect } from "@/components/rwc/Expect";
 import { Community } from "@/components/rwc/Community";
 import { Meeting } from "@/components/rwc/Meeting";
@@ -29,6 +30,7 @@ export default function HomePage() {
       <Hero />
       <Marquee items={marqueePrimaryItems} />
       <Mission />
+      <Donate />
       <Marquee variant="white" items={marqueeSecondaryItems} />
       <Expect />
       <Community />
